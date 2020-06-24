@@ -4,14 +4,14 @@
             <i class="fas fa-code"></i> Example Vue Component
         </div>
         <div class="card-body">
-            I'm an example lightweight vue datatable component.
+            Lightweight Vue datatable component with data from Laravel
+            (passed as global window objects).
             <DataTable
               :header-fields="headerFields"
               :data="data"
               :css="datatableCss"
             />
         </div>
-        <h3>Global window object: {{ surveyData }}</h3>
     </div>
 </template>
 
@@ -100,19 +100,9 @@
         },
         data: function() {
             return {
-                surveyData: window.Laravel.surveyData,
                 headerFields: [{label: "Package", name: "name"},
                                {label: "Version", name: "version", sortable: false}],
-                data: [{
-                    id: 1,
-                    name: "pooch",
-                    version: "1.1.0"
-                },
-                {
-                    id: 2,
-                    name: "numpy",
-                    version: "1.17.3"
-                }],
+                data: [window.Laravel.surveyData1, window.Laravel.surveyData2],
                 datatableCss: {
                     table: "table table-bordered table-hover table-striped table-center",
                     th: "header-item",

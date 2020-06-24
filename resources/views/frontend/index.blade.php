@@ -23,7 +23,8 @@
     </div><!--row-->
 <script>
     window.Laravel = <?php echo json_encode([
-	'surveyData' => $surveyData
+	'surveyData1' => $surveyData1,
+	'surveyData2' => $surveyData2
     ]); ?>
 </script>
 
