@@ -21,6 +21,11 @@
             <example-component></example-component>
         </div><!--col-->
     </div><!--row-->
+<script>
+    window.Laravel = <?php echo json_encode([
+	'surveyData' => $surveyData
+    ]); ?>
+</script>
 
     <div class="row">
         <div class="col">
