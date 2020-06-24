@@ -11,6 +11,7 @@
               :css="datatableCss"
             />
         </div>
+        <h3>Global window object: {{ surveyData }}</h3>
     </div>
 </template>
 
@@ -99,6 +100,7 @@
         },
         data: function() {
             return {
+                surveyData: window.Laravel.surveyData,
                 headerFields: [{label: "Package", name: "name"},
                                {label: "Version", name: "version", sortable: false}],
                 data: [{
